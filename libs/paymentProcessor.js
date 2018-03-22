@@ -64,17 +64,17 @@ function SetupForPool(logger, poolOptions, setupFinished){
 
     async.parallel([
         function(callback){
-            daemon.cmd('validateaddress', [poolOptions.address], function(result) {
+            daemon.cmd('getaddressinfo', [poolOptions.address], function(result) {
                 if (result.error){
                     logger.error(logSystem, logComponent, 'Error with payment processing daemon ' + JSON.stringify(result.error));
                     callback(true);
                 }
-                //else if (!result.response || !result.response.ismine) {
-                    //logger.error(logSystem, logComponent,
-                           // 'Daemon does not own pool address - payment processing can not be done with this daemon, '
-                          //  + JSON.stringify(result.response));
-                   // callback(true);
-               // }
+                else if (!result.response || !result.response.ismine) {
+                    logger.error(logSystem, logComponent,
+                            'Daemon does not own pool address - payment processing can not be done with this daemon, '
+                            + JSON.stringify(result.response));
+                    callback(true);
+                }
                 else{
                     callback()
                 }
