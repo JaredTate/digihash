@@ -14,7 +14,7 @@
         "minimumPayment": 100,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 14022,
+            "port": 14051,
             "user": "user",
             "password": "password"
         }
