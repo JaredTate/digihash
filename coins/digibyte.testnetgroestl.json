@@ -1,0 +1,5 @@
+{
+    "name": "Testnet-Groestl",
+    "symbol": "DGB",
+    "algorithm": "groestl"
+}
