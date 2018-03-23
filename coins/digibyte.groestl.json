@@ -1,5 +1,5 @@
 {
-    "name": "Digibyte-Groestl",
+    "name": "DigiByte-Groestl",
     "symbol": "DGB",
     "algorithm": "groestl"
 }

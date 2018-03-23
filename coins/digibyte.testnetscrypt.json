@@ -1,5 +1,5 @@
 {
-    "name": "DigiByte-Scrypt",
+    "name": "Testnet-Scrypt",
     "symbol": "DGB",
     "algorithm": "scrypt"
 }
