@@ -2,10 +2,10 @@
     "enabled": true,
     "coin": "digibyte.testnetscrypt.json",
 
-    "address": "DMhWnskQR1BCJPdbztmqX2b9ZLGPRmkG1r",
+    "address": "so5JTcciZsW6S2K7wzUAq4mzutGbZZdywm",
 
     "rewardRecipients": {
-        "DBB9neiUMFjXMpLxgHt1wJNCJYHVnDkjx4": 5.0
+        "svjjTR6xXkyTPZK7Uc6jWGWVgB2nfYCqYM": 5.0
     },
 
     "paymentProcessing": {
