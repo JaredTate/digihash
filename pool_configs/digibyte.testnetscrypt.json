@@ -22,10 +22,10 @@
 
     "ports": {
         "3013": {
-            "diff": 64
+            "diff": 0.001
         },
         "3037": {
-            "diff": 256,
+            "diff": 0.1,
             "varDiff": {
                 "minDiff": 7000,
                 "maxDiff": 16384,
