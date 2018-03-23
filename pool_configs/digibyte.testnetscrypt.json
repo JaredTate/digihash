@@ -14,7 +14,7 @@
         "minimumPayment": 100,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 14051,
+            "port": 14050,
             "user": "user",
             "password": "password"
         }
@@ -51,7 +51,7 @@
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 12024,
+        "port": 12051,
         "disableTransactions": true
     },
 
