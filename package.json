@@ -42,7 +42,7 @@
         "compression": "*",
         "dot": "*",
         "colors": "*",
-        "node-watch": "*",
+        "node-watch": "0.5.9",
         "request": "*",
         "nonce": "1.0.3",
         "bignum": "0.11.0",
