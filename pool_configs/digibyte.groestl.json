@@ -1,5 +1,5 @@
 {
-    "enabled": true,
+    "enabled": false,
     "coin": "digibyte.groestl.json",
 
     "address": "DHjWvKZezfdfF6ER5maoDtjoNabDcSkHXM",
