@@ -33,7 +33,7 @@
         "enabled": true,
         "host": "0.0.0.0",
         "port": 80,
-        "stratumHost": "digihash.digibyte.iu",
+        "stratumHost": "digihash.digibyte.io",
         "stats": {
             "updateInterval": 60,
             "historicalRetention": 43200,
