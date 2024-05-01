@@ -164,7 +164,7 @@ module.exports = function(logger){
                     logger[severity](logSystem, c, message);
                   });
               
-                  daemon.cmd('listdescriptors', [], function(result) {
+                  daemon.cmd(['-rpcwallet=' + coinInfo.walletname, 'listdescriptors'], [], function(result) {
                     if (result[0].error) {
                       logger.error(logSystem, c, 'Could not listdescriptors for ' + c + ' ' + JSON.stringify(result[0].error));
                       cback();
@@ -189,7 +189,7 @@ module.exports = function(logger){
                     coinBytes[c] = vBytePub.toString() + ',' + vBytePriv.toString();
                     coinsForRedis[c] = coinBytes[c];
                     cback();
-                  }, ['-rpcwallet=' + coinInfo.walletname]);
+                  });
                 }, function(err) {
                   callback(null, client, coinBytes, coinsForRedis);
                 });
