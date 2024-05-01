@@ -1,6 +1,7 @@
 {
     "enabled": true,
     "coin": "digibyte.scrypt.json",
+    "walletname": "ScryptMain",
 
     "address": "dgb1qy5u8vs4v7hvlkf6g3drcjudzyt4t2ndq7yazun",
 

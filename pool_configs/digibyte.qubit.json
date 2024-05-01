@@ -1,6 +1,7 @@
 {
     "enabled": true,
     "coin": "digibyte.qubit.json",
+    "walletname": "QubitMain",
 
     "address": "dgb1q5k5mt39ktk9k3qqays0ggme3gkgruthhejm4uj",
 
