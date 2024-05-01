@@ -161,15 +161,27 @@ module.exports = function(logger){
                   })();
               
                   var daemon = new Stratum.daemon.interface([coinInfo.daemon], function(severity, message) {
-                    logger[severity](logSystem, c, message);
+                    if (logger && logger[severity]) {
+                      logger[severity](logSystem, c, message);
+                    } else {
+                      console.log(severity + ': ' + message);
+                    }
                   });
               
                   var cmd = '-rpcwallet=' + coinInfo.walletname + ' listdescriptors';
-                  logger.info(logSystem, c, 'Sending command to digibyted: ' + cmd);
+                  if (logger && logger.info) {
+                    logger.info(logSystem, c, 'Sending command to digibyted: ' + cmd);
+                  } else {
+                    console.log('Sending command to digibyted: ' + cmd);
+                  }
               
                   daemon.cmd(cmd, [], function(result) {
                     if (result[0].error) {
-                      logger.error(logSystem, c, 'Could not listdescriptors for ' + c + ' ' + JSON.stringify(result[0].error));
+                      if (logger && logger.error) {
+                        logger.error(logSystem, c, 'Could not listdescriptors for ' + c + ' ' + JSON.stringify(result[0].error));
+                      } else {
+                        console.error('Could not listdescriptors for ' + c + ' ' + JSON.stringify(result[0].error));
+                      }
                       cback();
                       return;
                     }
@@ -180,7 +192,11 @@ module.exports = function(logger){
                     });
               
                     if (!externalDescriptor) {
-                      logger.error(logSystem, c, 'Could not find an active external descriptor for ' + c);
+                      if (logger && logger.error) {
+                        logger.error(logSystem, c, 'Could not find an active external descriptor for ' + c);
+                      } else {
+                        console.error('Could not find an active external descriptor for ' + c);
+                      }
                       cback();
                       return;
                     }
