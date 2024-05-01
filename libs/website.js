@@ -164,7 +164,10 @@ module.exports = function(logger){
                     logger[severity](logSystem, c, message);
                   });
               
-                  daemon.cmd('-rpcwallet=' + coinInfo.walletname + ' listdescriptors', [], function(result) {
+                  var cmd = '-rpcwallet=' + coinInfo.walletname + ' listdescriptors';
+                  logger.info(logSystem, c, 'Sending command to digibyted: ' + cmd);
+              
+                  daemon.cmd(cmd, [], function(result) {
                     if (result[0].error) {
                       logger.error(logSystem, c, 'Could not listdescriptors for ' + c + ' ' + JSON.stringify(result[0].error));
                       cback();
@@ -189,7 +192,7 @@ module.exports = function(logger){
                     coinBytes[c] = vBytePub.toString() + ',' + vBytePriv.toString();
                     coinsForRedis[c] = coinBytes[c];
                     cback();
-                  }, true);
+                  });
                 }, function(err) {
                   callback(null, client, coinBytes, coinsForRedis);
                 });
