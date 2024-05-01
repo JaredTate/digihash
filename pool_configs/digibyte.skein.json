@@ -2,10 +2,10 @@
     "enabled": true,
     "coin": "digibyte.skein.json",
 
-    "address": "DEHQKoxe9qykp5uYMrTLHgSo1DFUdZuZw9",
+    "address": "dgb1qhrjc2jdjw6ntth9jsqskg2kcd096gxry75kglg",
 
     "rewardRecipients": {
-        "D8ZVA7oAunzbt41BioXzuSpsAt5iYY9yKM": 20.0
+        "dgb1qpz3l8edmemsjy4c9wx692qy7us0zf0cmg96ntv": 20.0
     },
 
     "paymentProcessing": {

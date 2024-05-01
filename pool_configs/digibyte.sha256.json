@@ -2,10 +2,10 @@
     "enabled": true,
     "coin": "digibyte.sha256.json",
 
-    "address": "DPr7Ku9Xc77nBEHurTxqPTY2eSH1ZLtb2q",
+    "address": "dgb1qk2v7z6gvdnjrggewezhzwams6e6hpzyrkevtge",
 
     "rewardRecipients": {
-        "DFLZJk8fGE4hFhjuYfRLamm5THNBMw826Q": 20.0
+        "dgb1q4uf8cqnjjyt07x6953hnwz65wygjnymjcy77ng": 20.0
     },
 
     "paymentProcessing": {

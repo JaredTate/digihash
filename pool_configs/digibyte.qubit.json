@@ -2,10 +2,10 @@
     "enabled": true,
     "coin": "digibyte.qubit.json",
 
-    "address": "DLTuwgcYQyZ8yShbdg343XHuu956bbFtMk",
+    "address": "dgb1q5k5mt39ktk9k3qqays0ggme3gkgruthhejm4uj",
 
     "rewardRecipients": {
-        "D7BDs7J3HjjRvuPfqk8g8hQV8WoD6W3N5s": 20.0
+        "dgb1qcrpuc8c9a976na54eca5z5gwtd3nt3gp4qyk4x": 20.0
     },
 
     "paymentProcessing": {
