@@ -64,7 +64,7 @@ function SetupForPool(logger, poolOptions, setupFinished){
 
     async.parallel([
         function(callback){
-            daemon.cmd([poolOptions.walletname], 'getaddressinfo', [poolOptions.address], function(result) {
+            daemon.cmd('getaddressinfo', [poolOptions.address], function(result) {
                 if (result.error){
                     logger.error(logSystem, logComponent, 'Error with payment processing daemon ' + JSON.stringify(result.error));
                     callback(true);
