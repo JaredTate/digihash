@@ -1,7 +1,7 @@
 {
     "enabled": true,
     "coin": "digibyte.sha256.json",
-    "walletname": "/wallet/Sha256Main",
+    "walletname": "-rpcwallet=Sha256Final",
 
     "address": "dgb1qmfwkg6r4r54y6pt54tqdpp9gzwdt7qwxvl3a4k",
 

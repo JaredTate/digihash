@@ -1,7 +1,7 @@
 {
     "enabled": true,
     "coin": "digibyte.scrypt.json",
-    "walletname": "/wallet/ScryptMain",
+    "walletname": "-rpcwallet=ScryptFinal",
 
     "address": "dgb1qqj72e9xmjqgmj5duvdl7wfq90t83cmthcyq9z8",
 

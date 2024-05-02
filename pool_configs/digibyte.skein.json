@@ -1,7 +1,7 @@
 {
     "enabled": true,
     "coin": "digibyte.skein.json",
-    "walletname": "/wallet/SkeinMain",
+    "walletname": "-rpcwallet=SkeinFinal",
 
     "address": "dgb1qg5xyj680rjr8ykjyjaq77mv0hgls6dhfr22ulw",
 

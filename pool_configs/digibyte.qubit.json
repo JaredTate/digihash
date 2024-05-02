@@ -1,7 +1,7 @@
 {
     "enabled": true,
     "coin": "digibyte.qubit.json",
-    "walletname": "/wallet/QubitMain",
+    "walletname": "-rpcwallet=QubitFinal",
 
     "address": "dgb1q8w72ucrq774h0htugp0v7wnfju0qt8sj574pep",
 
