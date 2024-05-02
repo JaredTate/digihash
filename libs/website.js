@@ -145,74 +145,39 @@ module.exports = function(logger){
                 });
                 callback(null, client, coinBytes, missingCoins);
             },
-            function(client, coinBytes, missingCoins, callback) {
+            function(client, coinBytes, missingCoins, callback){
                 var coinsForRedis = {};
-              
-                async.each(missingCoins, function(c, cback) {
-                  var coinInfo = (function() {
-                    for (var pName in poolConfigs) {
-                      if (pName.toLowerCase() === c)
-                        return {
-                          daemon: poolConfigs[pName].paymentProcessing.daemon,
-                          address: poolConfigs[pName].address,
-                          walletname: poolConfigs[pName].walletname
-                        };
-                    }
-                  })();
-              
-                  var daemon = new Stratum.daemon.interface([coinInfo.daemon], function(severity, message) {
-                    if (logger && logger[severity]) {
-                      logger[severity](logSystem, c, message);
-                    } else {
-                      console.log(severity + ': ' + message);
-                    }
-                  });
-              
-                  var cmd = '-rpcwallet=' + coinInfo.walletname + ' listdescriptors';
-                  if (logger && logger.info) {
-                    logger.info(logSystem, c, 'Sending command to digibyted: ' + cmd);
-                  } else {
-                    console.log('Sending command to digibyted: ' + cmd);
-                  }
-              
-                  daemon.cmd(cmd, [], function(result) {
-                    if (result[0].error) {
-                      if (logger && logger.error) {
-                        logger.error(logSystem, c, 'Could not listdescriptors for ' + c + ' ' + JSON.stringify(result[0].error));
-                      } else {
-                        console.error('Could not listdescriptors for ' + c + ' ' + JSON.stringify(result[0].error));
-                      }
-                      cback();
-                      return;
-                    }
-              
-                    var descriptors = result[0].response.descriptors;
-                    var externalDescriptor = descriptors.find(function(desc) {
-                      return desc.active && !desc.internal;
+                async.each(missingCoins, function(c, cback){
+                    var coinInfo = (function(){
+                        for (var pName in poolConfigs){
+                            if (pName.toLowerCase() === c)
+                                return {
+                                    daemon: poolConfigs[pName].paymentProcessing.daemon,
+                                    address: poolConfigs[pName].address
+                                }
+                        }
+                    })();
+                    var daemon = new Stratum.daemon.interface([coinInfo.daemon], function(severity, message){
+                        logger[severity](logSystem, c, message);
                     });
-              
-                    if (!externalDescriptor) {
-                      if (logger && logger.error) {
-                        logger.error(logSystem, c, 'Could not find an active external descriptor for ' + c);
-                      } else {
-                        console.error('Could not find an active external descriptor for ' + c);
-                      }
-                      cback();
-                      return;
-                    }
-              
-                    var publicKey = externalDescriptor.desc.match(/\(([^)]+)\)/)[1];
-                    var vBytePub = util.getVersionByte(publicKey)[0];
-                    var vBytePriv = util.getVersionByte(publicKey.replace('pub', 'prv'))[0];
-              
-                    coinBytes[c] = vBytePub.toString() + ',' + vBytePriv.toString();
-                    coinsForRedis[c] = coinBytes[c];
-                    cback();
-                  });
-                }, function(err) {
-                  callback(null, client, coinBytes, coinsForRedis);
+                    daemon.cmd('dumpprivkey', [coinInfo.address], function(result){
+                        if (result[0].error){
+                            logger.error(logSystem, c, 'Could not dumpprivkey for ' + c + ' ' + JSON.stringify(result[0].error));
+                            cback();
+                            return;
+                        }
+
+                        var vBytePub = util.getVersionByte(coinInfo.address)[0];
+                        var vBytePriv = util.getVersionByte(result[0].response)[0];
+
+                        coinBytes[c] = vBytePub.toString() + ',' + vBytePriv.toString();
+                        coinsForRedis[c] = coinBytes[c];
+                        cback();
+                    });
+                }, function(err){
+                    callback(null, client, coinBytes, coinsForRedis);
                 });
-              },
+            },
             function(client, coinBytes, coinsForRedis, callback){
                 if (Object.keys(coinsForRedis).length > 0){
                     client.hmset('coinVersionBytes', coinsForRedis, function(err){
