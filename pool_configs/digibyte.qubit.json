@@ -1,11 +1,12 @@
 {
     "enabled": true,
     "coin": "digibyte.qubit.json",
+    "walletname": "-rpcwallet=QubitFinal",
 
-    "address": "DLTuwgcYQyZ8yShbdg343XHuu956bbFtMk",
+    "address": "D6Pq2G6Tv7S9qv1HkmwEAu5H9m5rQhmpbW",
 
     "rewardRecipients": {
-        "D7BDs7J3HjjRvuPfqk8g8hQV8WoD6W3N5s": 20.0
+        "DMneHYLRVi5CZGgSmgSv4aSqkjehUi339b": 20.0
     },
 
     "paymentProcessing": {

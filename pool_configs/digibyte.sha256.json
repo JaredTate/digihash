@@ -1,11 +1,12 @@
 {
     "enabled": true,
     "coin": "digibyte.sha256.json",
+    "walletname": "-rpcwallet=Sha256Final",
 
-    "address": "DPr7Ku9Xc77nBEHurTxqPTY2eSH1ZLtb2q",
+    "address": "DAWMeGZTNddjiGQCTwyRtVHGrwSVHxMX4R",
 
     "rewardRecipients": {
-        "DFLZJk8fGE4hFhjuYfRLamm5THNBMw826Q": 20.0
+        "DKTdPy21bQJXCE7BB8VijsDwdnvgEG8KqH": 20.0
     },
 
     "paymentProcessing": {

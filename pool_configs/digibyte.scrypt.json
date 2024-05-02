@@ -1,11 +1,12 @@
 {
     "enabled": true,
     "coin": "digibyte.scrypt.json",
+    "walletname": "-rpcwallet=ScryptFinal",
 
-    "address": "DPFraVVaJxvakEYMAWPbPTYV3PLWzU2FUR",
+    "address": "D6EDqD3E4ZSzJtrSqHn1tFiv84rPY3A8Mk",
 
     "rewardRecipients": {
-        "DFSgGpRAnVuumKW8gxLSsqenSs7nFZiVmQ": 20.0
+        "DT425KXiPXEQs7NdKpKhWetwboQ9g7JjAk": 20.0
     },
 
     "paymentProcessing": {

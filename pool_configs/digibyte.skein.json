@@ -1,11 +1,12 @@
 {
     "enabled": true,
     "coin": "digibyte.skein.json",
+    "walletname": "-rpcwallet=SkeinFinal",
 
-    "address": "DEHQKoxe9qykp5uYMrTLHgSo1DFUdZuZw9",
+    "address": "DHMsgt8i7QW7t6bX5HbH3qoBrqVQFVDcKb",
 
     "rewardRecipients": {
-        "D8ZVA7oAunzbt41BioXzuSpsAt5iYY9yKM": 20.0
+        "D8jfHaVYBnEzracCxnEQj8n587z8DzN3qr": 20.0
     },
 
     "paymentProcessing": {
