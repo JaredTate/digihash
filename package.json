@@ -45,7 +45,7 @@
         "node-watch": "0.5.9",
         "request": "2.88.2",
         "nonce": "1.0.3",
-        "bignum": "0.13.1",
+        "bignum": "0.12.5",
         "extend": "3.0.0"
     },
     "engines": {
