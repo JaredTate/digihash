@@ -1,4 +1,4 @@
-# To Setup DigiHash & Mine 4 DGB Algos
+# To Setup DigiHash & Mine 4 DGB Algos With DigiByte v8.22.0-RC4
 
 #### Install Node, Redis Server & Clone DigiHash
 ```
