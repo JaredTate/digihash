@@ -31,7 +31,7 @@
         "url": "https://github.com/DigiByte-Core/digihash.git"
     },
     "dependencies": {
-        "stratum-pool": "git://github.com/DigiByte-Core/node-stratum-pool.git",
+        "stratum-pool": "https://github.com/DigiByte-Core/node-stratum-pool.git",
         "dateformat": "2.2.0",
         "node-json-minify": "1.0.0",
         "redis": "2.7.1",
