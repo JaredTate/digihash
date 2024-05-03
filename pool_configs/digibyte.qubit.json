@@ -26,17 +26,17 @@
             "diff": 0.01
         },
         "3036": {
-            "diff": 0.4,
+            "diff": 1,
             "varDiff": {
                 "minDiff": 0.1,
-                "maxDiff": 0.9,
+                "maxDiff": 10.0,
                 "targetTime": 15,
                 "retargetTime": 90,
                 "variancePercent": 30
             }
         },
         "3260": {
-            "diff": 1
+            "diff": 8
         }
     },
 
