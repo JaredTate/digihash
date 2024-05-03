@@ -1,3 +1,139 @@
+# To Setup DigiHash & Mine 4 DGB Algos With DigiByte v8.22.0-RC4
+
+#### Install Node, Redis Server & Clone DigiHash
+```
+git clone https://github.com/DigiByte-Core/digihash.git
+sudo apt-get update
+sudo apt install redis-server
+sudo apt install nodejs
+sudo apt install npm
+```
+
+#### Install Node v 0.12.18 & Start Redis Server
+```
+sudo service redis-server start
+sudo npm install -g n
+sudo n install 0.12.18
+sudo n use 0.12.18
+```
+
+#### Download DigiByte Core
+Find the latest releases here and wget the URL: https://github.com/DigiByte-Core/digibyte/releases
+```
+wget https://github.com/DigiByte-Core/digibyte/releases/download/v8.22.0-rc4/digibyte-8.22.0-rc4-x86_64-linux-gnu.tar.gz
+tar -xvf digibyte-8.22.0-rc4-x86_64-linux-gnu.tar.gz
+cd digibyte-527219d69dd9
+cd bin
+cp digibyted ~/
+```
+
+#### Make Data Directorys In Root Folder & Create digibyte.confs
+Each daemon must run on different ports.
+```
+mkdir .digibyte-scrypt
+mkdir .digibyte-sha256
+mkdir .digibyte-qubit
+mkdir .digibyte-skein
+
+cd .digibyte-scrypt
+nano digibyte.conf
+
+cd .digibyte-sha256
+nano digibyte.conf
+
+cd .digibyte-skein
+nano digibyte.conf 
+
+cd .digibyte-qubit
+nano digibyte.conf 
+
+```
+Scrypt Conf:
+```
+rpcuser=user
+rpcpassword=password
+rpcport=14022
+port=12024
+server=1
+txindex=1
+debug=1
+maxconnections=128
+```
+
+Sha256 Conf:
+```
+rpcuser=user
+rpcpassword=password
+rpcport=14011
+port=12021
+server=1
+txindex=1
+debug=1
+maxconnections=128
+```
+
+Skein Conf:
+```
+rpcuser=user
+rpcpassword=password
+rpcport=14033
+port=12022
+server=1
+txindex=1
+debug=1
+maxconnections=128
+```
+
+Qubit Conf:
+```
+rpcuser=user
+rpcpassword=password
+rpcport=14044
+port=12020
+server=1
+txindex=1
+debug=1
+maxconnections=128
+```
+
+#### Start Daemons From Separate Directories
+```
+./digibyted -datadir=.digibyte-scrypt
+./digibyted -datadir=.digibyte-sha256 
+./digibyted -datadir=.digibyte-skein
+./digibyted -datadir=.digibyte-qubit
+```
+
+#### Create New Legacy Wallets & New Legacy Addresses
+You must use DGB addresses that start with a "d" or the pool will throw lots of errors. You cannot use descriptor wallets.
+```
+./digibyte-cli -datadir=.digibyte-scrypt -named createwallet wallet_name=Scrypt descriptors=false load_on_startup=true
+./digibyte-cli -datadir=.digibyte-sha256 -named createwallet wallet_name=Sha256 descriptors=false load_on_startup=true
+./digibyte-cli -datadir=.digibyte-skein -named createwallet wallet_name=Skein descriptors=false load_on_startup=true
+./digibyte-cli -datadir=.digibyte-qubit -named createwallet wallet_name=Qubit descriptors=false load_on_startup=true
+
+./digibyte-cli -datadir=.digibyte-scrypt getnewaddress "" "legacy"
+./digibyte-cli -datadir=.digibyte-sha256 getnewaddress "" "legacy"
+./digibyte-cli -datadir=.digibyte-skein getnewaddress "" "legacy"
+./digibyte-cli -datadir=.digibyte-qubit getnewaddress "" "legacy"
+```
+Add these addresses in the pool_configs folder.
+
+#### Start Pool Once All Daemons Are Synced
+```
+cd digihash
+sudo npm install
+sudo node init.js
+```
+
+#### Stop DigiByte Daemons 
+```
+./digibyte-cli -datadir=.digibyte-scrypt stop
+./digibyte-cli -datadir=.digibyte-sha256 stop
+./digibyte-cli -datadir=.digibyte-skein stop
+./digibyte-cli -datadir=.digibyte-qubit stop
+```
+
 # DigiHash NOMP ![NOMP Logo](http://zone117x.github.io/node-open-mining-portal/logo.svg "NOMP Logo")
 #### Node Open Mining Portal
 
