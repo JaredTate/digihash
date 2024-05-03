@@ -1,4 +1,5 @@
 # To Setup DigiHash & Mine 4 DGB Algos With DigiByte v8.22.0-RC4
+You need at least 32 GB RAM, and 8 cores on a Linux server to run this with 4 DGB algos.
 
 #### Install Node, Redis Server & Clone DigiHash
 ```
