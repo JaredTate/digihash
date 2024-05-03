@@ -1,4 +1,5 @@
 # To Setup DigiHash & Mine 4 DGB Algos With DigiByte v8.22.0-RC4
+You need at least 32 GB RAM, and 8 cores on a Linux server to run this with 4 DGB algos.
 
 #### Install Node, Redis Server & Clone DigiHash
 ```
@@ -50,6 +51,7 @@ nano digibyte.conf
 ```
 Scrypt Conf:
 ```
+algo=scrypt
 rpcuser=user
 rpcpassword=password
 rpcport=14022
@@ -62,6 +64,7 @@ maxconnections=128
 
 Sha256 Conf:
 ```
+algo=sha256d
 rpcuser=user
 rpcpassword=password
 rpcport=14011
@@ -74,6 +77,7 @@ maxconnections=128
 
 Skein Conf:
 ```
+algo=skein
 rpcuser=user
 rpcpassword=password
 rpcport=14033
@@ -86,6 +90,7 @@ maxconnections=128
 
 Qubit Conf:
 ```
+algo=qubit
 rpcuser=user
 rpcpassword=password
 rpcport=14044
@@ -105,7 +110,7 @@ maxconnections=128
 ```
 
 #### Create New Legacy Wallets & New Legacy Addresses
-You must use DGB addresses that start with a "d" or the pool will throw lots of errors. You cannot use descriptor wallets.
+You must use DGB addresses that starts with a "d" or the pool will throw lots of errors. You cannot use descriptor wallets.
 ```
 ./digibyte-cli -datadir=.digibyte-scrypt -named createwallet wallet_name=Scrypt descriptors=false load_on_startup=true
 ./digibyte-cli -datadir=.digibyte-sha256 -named createwallet wallet_name=Sha256 descriptors=false load_on_startup=true
