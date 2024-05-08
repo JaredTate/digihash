@@ -35,6 +35,7 @@ mkdir .digibyte-scrypt
 mkdir .digibyte-sha256
 mkdir .digibyte-qubit
 mkdir .digibyte-skein
+mkdir .digibyte-odo
 
 cd .digibyte-scrypt
 nano digibyte.conf
@@ -46,6 +47,9 @@ cd .digibyte-skein
 nano digibyte.conf 
 
 cd .digibyte-qubit
+nano digibyte.conf 
+
+cd .digibyte-odo
 nano digibyte.conf 
 
 ```
@@ -101,12 +105,26 @@ debug=1
 maxconnections=128
 ```
 
+Odo Conf:
+```
+algo=odo
+rpcuser=user
+rpcpassword=password
+rpcport=14055
+port=12023
+server=1
+txindex=1
+debug=1
+maxconnections=128
+```
+
 #### Start Daemons From Separate Directories
 ```
 ./digibyted -datadir=.digibyte-scrypt
 ./digibyted -datadir=.digibyte-sha256 
 ./digibyted -datadir=.digibyte-skein
 ./digibyted -datadir=.digibyte-qubit
+./digibyted -datadir=.digibyte-odo
 ```
 
 #### Create New Legacy Wallets & New Legacy Addresses
@@ -116,11 +134,13 @@ You must use DGB addresses that starts with a "d" or the pool will throw lots of
 ./digibyte-cli -datadir=.digibyte-sha256 -named createwallet wallet_name=Sha256 descriptors=false load_on_startup=true
 ./digibyte-cli -datadir=.digibyte-skein -named createwallet wallet_name=Skein descriptors=false load_on_startup=true
 ./digibyte-cli -datadir=.digibyte-qubit -named createwallet wallet_name=Qubit descriptors=false load_on_startup=true
+./digibyte-cli -datadir=.digibyte-odo -named createwallet wallet_name=Odo descriptors=false load_on_startup=true
 
 ./digibyte-cli -datadir=.digibyte-scrypt getnewaddress "" "legacy"
 ./digibyte-cli -datadir=.digibyte-sha256 getnewaddress "" "legacy"
 ./digibyte-cli -datadir=.digibyte-skein getnewaddress "" "legacy"
 ./digibyte-cli -datadir=.digibyte-qubit getnewaddress "" "legacy"
+./digibyte-cli -datadir=.digibyte-odo getnewaddress "" "legacy"
 ```
 Add these addresses in the pool_configs folder.
 
