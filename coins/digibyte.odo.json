@@ -1,0 +1,6 @@
+{
+    "name": "DigiByte-Odo",
+    "symbol": "DGB",
+    "algorithm": "odo",
+    "coinbase": "DigiHash"
+}

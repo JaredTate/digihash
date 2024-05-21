@@ -1,5 +1,6 @@
 {
     "name": "DigiByte-Sha256",
     "symbol": "DGB",
-    "algorithm": "sha256"
+    "algorithm": "sha256",
+    "coinbase": "DigiHash"
 }

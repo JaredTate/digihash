@@ -1,12 +1,12 @@
 {
     "enabled": true,
-    "coin": "digibyte.qubit.json",
-    "walletname": "-rpcwallet=QubitFinal",
+    "coin": "digibyte.odo.json",
+    "walletname": "-rpcwallet=OdoFinal",
 
-    "address": "DP1vhm74LJ9cR7tTw7F7yAKryn5zn8y5ZP",
+    "address": "DD2nTMSNizVp9EGoJ76GynAJqbtAva7hJM",
 
     "rewardRecipients": {
-        "DMneHYLRVi5CZGgSmgSv4aSqkjehUi339b": 10.0
+        "SMov95sey81erde4ezrTvhMht7r4sXv86i": 10.0
     },
 
     "paymentProcessing": {
@@ -15,35 +15,35 @@
         "minimumPayment": 100,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 14044,
+            "port": 14055,
             "user": "user",
             "password": "password"
         }
     },
 
     "ports": {
-        "3012": {
-            "diff": 0.05
+        "3013": {
+            "diff": 0.01
         },
-        "3036": {
+        "3037": {
             "diff": 1,
             "varDiff": {
-                "minDiff": 0.05,
-                "maxDiff": 5.0,
+                "minDiff": 0.01,
+                "maxDiff": 100,
                 "targetTime": 15,
                 "retargetTime": 90,
                 "variancePercent": 30
             }
         },
-        "3260": {
-            "diff": 5
+        "3261": {
+            "diff": 16
         }
     },
 
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 14044,
+            "port": 14055,
             "user": "user",
             "password": "password"
         }

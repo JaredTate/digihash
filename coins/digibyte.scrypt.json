@@ -1,5 +1,6 @@
 {
     "name": "DigiByte-Scrypt",
     "symbol": "DGB",
-    "algorithm": "scrypt"
+    "algorithm": "scrypt",
+    "coinbase": "DigiHash"
 }
