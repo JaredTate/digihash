@@ -1,6 +1,6 @@
 {
-    "enabled": false,
-    "coin": "digibyte.testnetgroestl.json",
+    "enabled": true,
+    "coin": "digibyte.testnetodo.json",
 
     "address": "sqURrYYfALfbrAgT3vg3QrkRQMjDuH3UnN",
 
@@ -21,25 +21,23 @@
     },
 
     "ports": {
-        "3010": {
-            "diff": 0.00000001
-
+        "4013": {
+            "diff": 0.01
         },
-        "3034": {
-            "diff": 0.1,
+        "4037": {
+            "diff": 1,
             "varDiff": {
                 "minDiff": 0.01,
-                "maxDiff": 512,
+                "maxDiff": 100,
                 "targetTime": 15,
                 "retargetTime": 90,
                 "variancePercent": 30
             }
         },
-        "3258": {
-            "diff": 0.4
+        "4261": {
+            "diff": 16
         }
     },
-
     "daemons": [
         {
             "host": "127.0.0.1",

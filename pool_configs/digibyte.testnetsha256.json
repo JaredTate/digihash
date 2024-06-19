@@ -1,5 +1,5 @@
 {
-    "enabled": false,
+    "enabled": true,
     "coin": "digibyte.testnetsha256.json",
 
     "address": "sqURrYYfALfbrAgT3vg3QrkRQMjDuH3UnN",
@@ -21,10 +21,10 @@
     },
 
     "ports": {
-        "3008": {
+        "4008": {
             "diff": 8192
         },
-        "3032": {
+        "4032": {
             "diff": 16384,
             "varDiff": {
                 "minDiff": 10000,
@@ -34,7 +34,7 @@
                 "variancePercent": 30
             }
         },
-        "3256": {
+        "4256": {
             "diff": 32768
         }
     },
