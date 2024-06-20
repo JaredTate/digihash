@@ -22,12 +22,12 @@
 
     "ports": {
         "4013": {
-            "diff": 0.01
+            "diff": 0.1
         },
         "4037": {
             "diff": 1,
             "varDiff": {
-                "minDiff": 0.01,
+                "minDiff": 0.1,
                 "maxDiff": 1000000,
                 "targetTime": 15,
                 "retargetTime": 90,
