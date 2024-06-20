@@ -1,5 +1,5 @@
 {
-    "enabled": true,
+    "enabled": false,
     "coin": "digibyte.testnetsha256.json",
 
     "address": "sqURrYYfALfbrAgT3vg3QrkRQMjDuH3UnN",

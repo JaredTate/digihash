@@ -2,10 +2,10 @@
     "enabled": true,
     "coin": "digibyte.testnetodo.json",
 
-    "address": "sqURrYYfALfbrAgT3vg3QrkRQMjDuH3UnN",
+    "address": "sqY9KbdWpTkeeXbt1dXcVXzpk7MEaxWA9v",
 
     "rewardRecipients": {
-        "svjjTR6xXkyTPZK7Uc6jWGWVgB2nfYCqYM": 5.0
+        "dgbt1qye96jlq89tc0dclz6aexqrg0dklcxn7ghy065p": 10.0
     },
 
     "paymentProcessing": {
@@ -14,7 +14,7 @@
         "minimumPayment": 100,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 14060,
+            "port": 14023,
             "user": "user",
             "password": "password"
         }
@@ -41,7 +41,7 @@
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 14060,
+            "port": 14023,
             "user": "user",
             "password": "password"
         }
