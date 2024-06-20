@@ -1,8 +1,8 @@
 {
-    "enabled": false,
+    "enabled": true,
     "coin": "digibyte.testnetodo.json",
 
-    "address": "sqY9KbdWpTkeeXbt1dXcVXzpk7MEaxWA9v",
+    "address": "swtKFnb8jv5KKkN57FNwTkBmdf2cFrhGzn",
 
     "rewardRecipients": {
         "yQafs6uP8RLJAfuoy3S1UvyooKUVgx762T": 10.0
