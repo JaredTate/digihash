@@ -22,20 +22,20 @@
 
     "ports": {
         "4008": {
-            "diff": 8192
+            "diff": 0.01
         },
         "4032": {
-            "diff": 16384,
+            "diff": 1,
             "varDiff": {
-                "minDiff": 10000,
-                "maxDiff": 19000,
+                "minDiff": 0.01,
+                "maxDiff": 100,
                 "targetTime": 15,
                 "retargetTime": 90,
                 "variancePercent": 30
             }
         },
         "4256": {
-            "diff": 32768
+            "diff": 100
         }
     },
 
