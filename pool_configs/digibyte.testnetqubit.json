@@ -1,11 +1,11 @@
 {
-    "enabled": false,
+    "enabled": true,
     "coin": "digibyte.testnetqubit.json",
 
-    "address": "sqURrYYfALfbrAgT3vg3QrkRQMjDuH3UnN",
+    "address": "t3DDukzRy46LHRkcyVEdGfeJUWW1NgjS6k",
 
     "rewardRecipients": {
-        "svjjTR6xXkyTPZK7Uc6jWGWVgB2nfYCqYM": 5.0
+        "yc7Hm9Zorzi9cafcwLJb9cvx4Q4AvcL4oL": 10.0
     },
 
     "paymentProcessing": {
@@ -14,17 +14,17 @@
         "minimumPayment": 100,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 14061,
+            "port": 14092,
             "user": "user",
             "password": "password"
         }
     },
 
     "ports": {
-        "3012": {
+        "4012": {
             "diff": 0.01
         },
-        "3036": {
+        "4036": {
             "diff": 0.4,
             "varDiff": {
                 "minDiff": 0.1,
@@ -34,7 +34,7 @@
                 "variancePercent": 30
             }
         },
-        "3260": {
+        "4260": {
             "diff": 1
         }
     },
@@ -42,7 +42,7 @@
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 14061,
+            "port": 14092,
             "user": "user",
             "password": "password"
         }

@@ -1,5 +1,5 @@
 {
-    "enabled": false,
+    "enabled": true,
     "coin": "digibyte.testnetodo.json",
 
     "address": "swtKFnb8jv5KKkN57FNwTkBmdf2cFrhGzn",
@@ -14,7 +14,7 @@
         "minimumPayment": 100,
         "daemon": {
             "host": "127.0.0.1",
-            "port": 14023,
+            "port": 14090,
             "user": "user",
             "password": "password"
         }
@@ -41,7 +41,7 @@
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 14023,
+            "port": 14090,
             "user": "user",
             "password": "password"
         }
