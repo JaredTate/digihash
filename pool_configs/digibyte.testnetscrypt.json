@@ -11,7 +11,7 @@
     "paymentProcessing": {
         "enabled": true,
         "paymentInterval": 60,
-        "minimumPayment": 100,
+        "minimumPayment": 5,
         "daemon": {
             "host": "127.0.0.1",
             "port": 14093,
