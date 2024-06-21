@@ -50,8 +50,8 @@
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 14070,
-        "disableTransactions": false
+        "port": 12011,
+        "disableTransactions": true
     },
 
     "mposMode": {
