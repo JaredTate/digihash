@@ -1,5 +1,5 @@
 {
-    "enabled": true,
+    "enabled": false,
     "coin": "digibyte.testnetscrypt.json",
 
     "address": "t4ona59fxswkvcnmdjZGSuDKxradXwm9Bm",
@@ -9,7 +9,7 @@
     },
 
     "paymentProcessing": {
-        "enabled": false,
+        "enabled": true,
         "paymentInterval": 60,
         "minimumPayment": 5,
         "daemon": {

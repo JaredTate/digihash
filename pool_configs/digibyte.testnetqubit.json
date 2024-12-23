@@ -1,5 +1,5 @@
 {
-    "enabled": true,
+    "enabled": false,
     "coin": "digibyte.testnetqubit.json",
 
     "address": "sp1haRKk2DzsZDKgBBpDG4pmRcsaKX3faB",
@@ -9,7 +9,7 @@
     },
 
     "paymentProcessing": {
-        "enabled": false,
+        "enabled": true,
         "paymentInterval": 60,
         "minimumPayment": 5,
         "daemon": {
