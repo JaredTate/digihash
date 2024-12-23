@@ -1,5 +1,5 @@
 {
-    "name": "DigiByte-Qubit",
+    "name": "digibyte-qubit",
     "symbol": "DGB",
     "algorithm": "qubit",
     "coinbase": "DigiHash"
