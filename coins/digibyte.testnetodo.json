@@ -1,5 +1,5 @@
 {
-    "name": "Testnet-Odo",
+    "name": "testnet-odo",
     "symbol": "DGB",
     "algorithm": "odo",
     "coinbase": "DigiHash"
