@@ -2,5 +2,6 @@
     "name": "digibyte-skein",
     "symbol": "DGB",
     "algorithm": "skein",
+    "peerMagic": "fac3b6da",
     "coinbase": "DigiHash"
 }

@@ -2,5 +2,6 @@
     "name": "digibyte-odo",
     "symbol": "DGB",
     "algorithm": "odo",
+    "peerMagic": "fac3b6da",
     "coinbase": "DigiHash"
 }
