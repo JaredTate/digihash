@@ -1,5 +1,5 @@
 {
-    "name": "digibyte-skien",
+    "name": "digibyte-skein",
     "symbol": "DGB",
     "algorithm": "skein",
     "coinbase": "DigiHash"
