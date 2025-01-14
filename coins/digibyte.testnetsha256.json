@@ -1,6 +1,5 @@
 {
     "name": "Testnet-Sha256",
     "symbol": "DGB",
-    "algorithm": "sha256",
-    "txfee": 0.1
+    "algorithm": "sha256"
 }

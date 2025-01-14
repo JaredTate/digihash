@@ -1,7 +1,7 @@
 {
     "enabled": true,
     "coin": "digibyte.skein.json",
-    "walletname": "-rpcwallet=SkeinFinal",
+    "walletname": "-rpcwallet=Skein",
 
     "address": "D8cLcRbYtxP2aAhbVwQ4bRc4G2CaB3Dnw3",
 
@@ -52,7 +52,7 @@
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 12024,
+        "port": 12022,
         "disableTransactions": true
     },
 
